@@ -7,13 +7,12 @@ node {
 
   stage('Build') {
     // you should build this repo with a maven build step here
-    echo "#########################################"
-    echo "Here begins my code"
-    echo "#########################################"
+    echo "Hello"
+
     withMaven (maven: 'maven3') {
               sh "mvn package"
             }
   }
   //archiveArtifacts artifacts: '**/*.jar', fingerprint: true
   junit 'target/surefire-reports/*.xml'
-}
+      }
