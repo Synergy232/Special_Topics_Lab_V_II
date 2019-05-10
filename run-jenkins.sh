@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 REPO_DIR=${1:-$PWD}
 echo "making $REPO_DIR readable for local development"
